@@ -8,4 +8,9 @@ public class Toy
     public string Weight { get; set; }
 
     public List<Kid> Kids { get; set; }
+
+    public override string? ToString()
+    {
+        return $"{{ \"Id\": {Id}, \"Name\": \"{Name}\", \"Material\": \"{Material}\", \"Weight\": \"{Weight}\" }}";
+    }
 }

@@ -1,15 +1,17 @@
 ﻿namespace MikulasGyar.EndPoint;
 
-public static class FactoryItems
+public static class GetMethods
 {
     public static WebApplication GetAllFactoryItems(this WebApplication app)
     {
+        string toyData = "";
+
         app.MapGet("/seedData", () =>
         {
             using var db = new DatabaseContext();
 
             var toy1 = new Toy() { Material = "wood", Name = "Diótörő", Weight = "1" };
-            var toy2 = new Toy() { Material = "metal", Name = "Bicigli", Weight = "3" };
+            var toy2 = new Toy() { Material = "metal", Name = "Bicikli", Weight = "3" };
             var toy3 = new Toy() { Material = "plastic", Name = "Lepkefogó", Weight = "0,2" };
             db.Toys.Add(toy1);
             db.Toys.Add(toy2);
@@ -33,14 +35,39 @@ public static class FactoryItems
 
             var toys = db.Toys
                         .ToList();
-            string data = "";
 
             foreach (var item in toys)
             {
-                data += item.ToString();
+                toyData += item.ToString();
             }
-            return data;
+            return toyData;
         });
+
+        app.MapGet("/toys", () => toyData);
+
+        app.MapGet("/toys/{id}", (string id) =>
+        {
+            if (int.TryParse(id, out int desiredId))
+            {
+                string searchedToy = "";
+                using var db = new DatabaseContext();
+
+                if (desiredId > Convert.ToInt32(db.Toys.Count()))
+                {
+                    throw new InvalidOperationException("Toy not found");
+                }
+
+                var toy = db.Toys
+                            .Where(item => item.Id == desiredId);
+                foreach (var item in toy)
+                {
+                    searchedToy = item.ToString();
+                }
+                return searchedToy;
+            }
+            throw new FormatException(id);
+        });
+
         return app;
     }
 }
