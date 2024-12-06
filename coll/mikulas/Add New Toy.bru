@@ -1,0 +1,19 @@
+meta {
+  name: Add New Toy
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/toys
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "Toy train",
+      "material": "wood",
+      "weight": 1.25
+  }
+}

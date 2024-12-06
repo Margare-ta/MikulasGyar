@@ -1,0 +1,17 @@
+meta {
+  name: Update Toy -Wrong ID-
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{baseUrl}}/toys/1234
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "PlayCube X"
+  }
+}

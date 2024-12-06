@@ -1,0 +1,20 @@
+meta {
+  name: Add New Toy -Invalid-
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/toys
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": 78,
+      "material": "air",
+      "weight": -5
+  }
+  
+}

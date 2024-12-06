@@ -1,0 +1,17 @@
+meta {
+  name: Update Toy -Invalid-
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/toys/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "material": false
+  }
+}

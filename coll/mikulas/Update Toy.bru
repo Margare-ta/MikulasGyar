@@ -1,0 +1,17 @@
+meta {
+  name: Update Toy
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/toys/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "weight": 3
+  }
+}
