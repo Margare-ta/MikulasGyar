@@ -64,6 +64,21 @@ public static class GetMethods
             throw new FormatException(id);
         });
 
+        app.MapGet("/children", () =>
+        {
+            string newKidData = "";
+            using var db = new DatabaseContext();
+
+            var kids = db.Kids
+                        .ToList();
+
+            foreach (var item in kids)
+            {
+                newKidData += item.ToString();
+            }
+            return newKidData.ToString();
+        });
+
         return app;
     }
 }
