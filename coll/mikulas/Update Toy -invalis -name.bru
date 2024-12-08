@@ -1,0 +1,17 @@
+meta {
+  name: Update Toy -invalis -name
+  type: http
+  seq: 16
+}
+
+patch {
+  url: {{baseUrl}}/toys/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "lamp"
+  }
+}

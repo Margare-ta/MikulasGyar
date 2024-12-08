@@ -34,6 +34,10 @@ public static class PatchMethods
                         {
                             newWeight = datas[i + 1];
                         }
+                        else
+                        {
+                            return "invalid weight";
+                        }
                     }
                 }
                 else if (datas.Contains("name"))
@@ -43,6 +47,10 @@ public static class PatchMethods
                         if (datas[i] == ": ")
                         {
                             newName = datas[i + 1];
+                        }
+                        else
+                        {
+                            return "invalid name";
                         }
                     }
                 }
@@ -55,6 +63,10 @@ public static class PatchMethods
                             if (datas[i] == ": ")
                             {
                                 newMaterial = datas[i + 1];
+                            }
+                            else
+                            {
+                                return "invalid material";
                             }
                         }
                     }

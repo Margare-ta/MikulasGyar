@@ -4,6 +4,7 @@ public static class PostMethods
 {
     public static WebApplication PostFactoryItems(this WebApplication app)
     {
+
         app.MapPost("/toys", async (Toy toy) =>
         {
 

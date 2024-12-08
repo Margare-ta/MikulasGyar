@@ -1,0 +1,17 @@
+meta {
+  name: Update Toy -name
+  type: http
+  seq: 15
+}
+
+patch {
+  url: {{baseUrl}}/toys/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "material": "wood"
+  }
+}
