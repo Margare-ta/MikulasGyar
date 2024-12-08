@@ -23,11 +23,8 @@ public static class PutMethods
                     {
                         foreach (var item in toy)
                         {
-                            foreach (var item2 in kid)
-                            {
-                                item.Kids.Add(item2);
-                                returnAnswer += "success";
-                            }
+                            item.Kids.Add((Kid)kid);
+                            returnAnswer += "success";
                         }
                         db.SaveChanges();
                         return returnAnswer;

@@ -10,6 +10,7 @@ var app = builder.Build();
     app.DeleteFactoryItems();
     app.PostFactoryItems();
     app.PatchFactoryItems();
+    app.PutFactoryItems();
 }
 
 app.Run();
