@@ -46,18 +46,19 @@ public static class GetMethods
 
                 using var db = new DatabaseContext();
 
-                if (desiredId > Convert.ToInt32(db.Toys.Count()))
-                {
-                    throw new InvalidOperationException("Toy not found");
-                }
-
                 var toy = db.Toys
-                            .Where(item => item.Id == desiredId);
+                           .Where(item => item.Id == desiredId);
+
+                if (toy == null)
+                {
+                    return "Toy with ID" + id + "not found.";
+                }
 
                 foreach (var item in toy)
                 {
                     searchedToy = item.ToString();
                 }
+
                 return searchedToy;
             }
             throw new FormatException(id);
