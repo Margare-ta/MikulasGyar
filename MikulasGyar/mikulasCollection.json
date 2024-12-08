@@ -27,7 +27,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"name\": 78,\r\n    \"material\": \"air\",\r\n    \"weight\": -5\r\n}\r\n",
+          "raw": "{\n    \"name\": 2,\n    \"material\": \"air\",\n    \"weight\": -5\n}\n",
           "options": {
             "raw": {
               "language": "json"
@@ -260,7 +260,103 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"material\": false\r\n}",
+          "raw": "{\n    \"material\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update Toy -invalis -name",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "{{baseUrl}}/toys/2",
+          "protocol": "",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "toys",
+            "2"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update Toy -material",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "{{baseUrl}}/toys/2",
+          "protocol": "",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "toys",
+            "2"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"material\": \"wood\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update Toy -name",
+      "event": [],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "{{baseUrl}}/toys/2",
+          "protocol": "",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "toys",
+            "2"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"lamp\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -324,7 +420,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"weight\": \"3\"\n}",
+          "raw": "{\n    \"weight\": \"7\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -336,102 +432,6 @@
     {
       "name": "bruno",
       "event": []
-    },
-    {
-      "name": "Update Toy -material",
-      "event": [],
-      "request": {
-        "method": "PATCH",
-        "header": [],
-        "auth": null,
-        "description": "",
-        "url": {
-          "raw": "{{baseUrl}}/toys/2",
-          "protocol": "",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "toys",
-            "2"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"material\": false\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Update Toy -name",
-      "event": [],
-      "request": {
-        "method": "PATCH",
-        "header": [],
-        "auth": null,
-        "description": "",
-        "url": {
-          "raw": "{{baseUrl}}/toys/2",
-          "protocol": "",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "toys",
-            "2"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"material\": \"wood\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "Update Toy -invalis -name",
-      "event": [],
-      "request": {
-        "method": "PATCH",
-        "header": [],
-        "auth": null,
-        "description": "",
-        "url": {
-          "raw": "{{baseUrl}}/toys/2",
-          "protocol": "",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "toys",
-            "2"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"name\": \"lamp\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        }
-      }
     }
   ],
   "variable": [
